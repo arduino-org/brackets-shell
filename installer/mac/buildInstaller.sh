@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # config
-releaseName="Brackets"
+releaseName="ArduinoStudio"
 version="1.3"
-dmgName="${releaseName} Release ${version}"
+dmgName="${releaseName} ArduinoStudio ${version}"
 format="bzip2"
 encryption="none"
 tmpLayout="./dropDmgConfig/layouts/tempLayout"
