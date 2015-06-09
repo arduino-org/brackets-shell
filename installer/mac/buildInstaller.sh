@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # config
-releaseName="Brackets"
+releaseName="ArduinoStudio"
 version="1.1"
 dmgName="${releaseName} Release ${version}"
 format="bzip2"
