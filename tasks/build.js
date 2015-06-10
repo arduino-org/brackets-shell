@@ -224,10 +224,10 @@ module.exports = function (grunt) {
 
         var done = this.async(),
             version = semver.parse(grunt.config("pkg").version),
-            release = version.major + "." + version.minor;
+            release = version.major + "." + version.minor + "." + version.patch;
 
         spawn(["bash build_installer.sh"], { cwd: resolve("installer/linux"), env: getBracketsEnv() }).then(function () {
-            return common.rename("installer/linux/brackets.deb", "installer/linux/Brackets Release " + release + " " + common.arch() + "-bit.deb");
+            return common.rename("installer/linux/arduinostudio.deb", "installer/linux/arduinostudio-" + release + "-linux" + common.arch() + ".deb");
         }).then(function () {
             done();
         }, function (err) {
@@ -240,10 +240,10 @@ module.exports = function (grunt) {
     grunt.registerTask("build-linux-archive", "Build portable Linux .tar.gz", function () {
         var done = this.async(),
             version = semver.parse(grunt.config("pkg").version),
-            release = version.major + "." + version.minor;
+            release = version.major + "." + version.minor + "." + version.patch;
 
         spawn(["bash build_archive.sh"], { cwd: resolve("installer/linux"), env: getBracketsEnv() }).then(function () {
-            return common.rename("installer/linux/brackets.tar.gz", "installer/linux/Brackets Release " + release + " " + common.arch() + "-bit.tar.gz");
+            return common.rename("installer/linux/arduinostudio.tar.gz", "installer/linux/arduinostudio-" + release + "-linux" + common.arch() + ".tar.gz");
         }).then(function () {
             done();
         }, function (err) {
