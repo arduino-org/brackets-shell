@@ -1,6 +1,6 @@
 #!/bin/bash
-echo 'uninstalling brackets from your ~/.local directory'
-echo 'run with -c to remove ~/.config/Brackets'
+echo 'uninstalling arduinostudio from your ~/.local directory'
+echo 'run with -c to remove ~/.config/ArduinoStudio'
 
 removeConfig=false
 
@@ -15,13 +15,13 @@ done
 shift $((OPTIND - 1))
 
 if [ "$removeConfig" = true ]; then
-    echo 'deleting ~/.config/Brackets'
-    rm -rf ~/.config/Brackets
+    echo 'deleting ~/.config/ArduinoStudio'
+    rm -rf ~/.config/ArduinoStudio
 fi
 
 # Safety first: only uninstall files we know about.
 
-rm -f ~/.local/bin/brackets
-rm -f ~/.local/share/applications/brackets.desktop
+rm -f ~/.local/bin/arduinostudio
+rm -f ~/.local/share/applications/arduinostudio.desktop
 
-echo 'finished uninstall brackets from your ~/.local directory'
+echo 'finished uninstall arduinostudio from your ~/.local directory'

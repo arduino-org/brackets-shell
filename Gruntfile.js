@@ -35,7 +35,7 @@ module.exports = function (grunt) {
     } else if (platform === "win") {
         staging = "installer/win/staging";
     } else {
-        staging = "installer/linux/debian/package-root/opt/brackets";
+        staging = "installer/linux/debian/package-root/opt/arduinostudio";
     }
 
     grunt.initConfig({
@@ -92,7 +92,7 @@ module.exports = function (grunt) {
             "downloads"         : ["downloads"],
             "installer-mac"     : ["installer/mac/*.dmg"],
             "installer-win"     : ["installer/win/*.msi"],
-            "installer-linux"   : ["installer/linux/debian/*.deb"],
+            "installer-linux"   : ["installer/linux/debian/*.deb","installer/linux/*.tar.gz","out/","installer/linux/*.deb"],
             "staging-mac"       : ["installer/mac/staging"],
             "staging-win"       : ["installer/win/staging"],
             "staging-linux"     : ["<%= build.staging %>"],
@@ -107,7 +107,7 @@ module.exports = function (grunt) {
                         "src"       : [
                             "locales/**",
                             "node-core/**",
-                            "Brackets.exe",
+                            "ArduinoStudio.exe",
                             "node.exe",
                             "cef.pak",
                             "devtools_resources.pak",
@@ -149,7 +149,7 @@ module.exports = function (grunt) {
                             "locales/**",
                             "node-core/**",
                             "appshell*.png",
-                            "Brackets",
+                            "ArduinoStudio",
                             "Brackets-node",
                             "cef.pak",
                             "devtools_resources.pak"
@@ -160,8 +160,8 @@ module.exports = function (grunt) {
                         "expand"    : true,
                         "cwd"       : "installer/linux/debian/",
                         "src"       : [
-                            "brackets.desktop",
-                            "brackets"
+                            "arduinostudio.desktop",
+                            "arduinostudio"
                         ],
                         "dest"      : "<%= build.staging %>"
                     }
@@ -221,10 +221,10 @@ module.exports = function (grunt) {
             "version"       : "3.1547.1459"
         },
         "node": {
-            "version"       : "0.10.24"
+            "version"       : "0.10.38"
         },
         "npm": {
-            "version"       : "1.2.11"
+            "version"       : "1.4.28"
         }
     });
 

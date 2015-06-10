@@ -2,7 +2,7 @@
 Name=Brackets
 Type=Application
 Categories=Development
-Exec=/opt/brackets/brackets %U
-Icon=brackets
+Exec=/opt/arduinostudio/ArduinoStudio %U
+Icon=arduinostudio
 MimeType=text/html;
 Keywords=Text;Editor;Write;Web;Development;
