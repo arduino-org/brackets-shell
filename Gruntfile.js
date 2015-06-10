@@ -107,7 +107,7 @@ module.exports = function (grunt) {
                         "src"       : [
                             "locales/**",
                             "node-core/**",
-                            "Brackets.exe",
+                            "ArduinoStudio.exe",
                             "node.exe",
                             "cef.pak",
                             "cef_100_percent.pak",
