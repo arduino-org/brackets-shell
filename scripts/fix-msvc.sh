@@ -1,2 +1,2 @@
-cat brackets.vcxproj | sed 's.xcopy \\efy.xcopy /efy.g'  > brackets.vcxproj.txt
-mv brackets.vcxproj.txt brackets.vcxproj
+cat ArduinoStudio.vcxproj | sed 's.xcopy \\efy.xcopy /efy.g'  > ArduinoStudio.vcxproj.txt
+mv ArduinoStudio.vcxproj.txt ArduinoStudio.vcxproj

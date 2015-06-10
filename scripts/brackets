@@ -1,7 +1,7 @@
 #!/bin/sh
 (set -o igncr) 2>/dev/null && set -o igncr; # cygwin encoding fix
 
-# Run through the current and parent directories for Brackets.exe
+# Run through the current and parent directories for ArduinoStudio.exe
 # and execute when found. $0 is the path to this script.
 
 TARGET_PATH="$(dirname "$0")"
@@ -15,7 +15,7 @@ if [ "$OS_NAME" == "MinGW" ]; then
     # Suprisingly MING32 platform recognizes
     # windows "start" command. Use this against
     # launching .exe as the later is blocking.
-    start "Brackets.exe" "$@"
+    start "ArduinoStudio.exe" "$@"
 else
     if [ "$OS_NAME" == "CYGWIN" ]; then
         TARGET_PATH=`cygpath -w "$TARGET_PATH"`
@@ -23,7 +23,7 @@ else
 
     while [ ! -z "$TARGET_PATH" ] && [ "$TARGET_PATH" != "/" ] && [ "$TARGET_PATH" != "." ]
     do
-        if [ -x "$TARGET_PATH/Brackets.exe" ]; then
+        if [ -x "$TARGET_PATH/ArduinoStudio.exe" ]; then
             break;
         fi
 
@@ -36,9 +36,9 @@ else
     # Unfortunately windows "start" command is not recognized natively
     # and hence have to launch exe from command line prompt in a blocking
     # way.
-    if [ ! -z "$TARGET_PATH" ] && [ -x "$TARGET_PATH/Brackets.exe" ]; then
+    if [ ! -z "$TARGET_PATH" ] && [ -x "$TARGET_PATH/ArduinoStudio.exe" ]; then
         "$TARGET_PATH/Brackets.exe" "$@"
     else
-        echo "Unable to launch Brackets as Brackets.exe could not be located. Try re-installing Brackets."
+        echo "Unable to launch ArduinoStudio as ArduinoStudio.exe could not be located. Try re-installing ArduinoStudio."
     fi
 fi

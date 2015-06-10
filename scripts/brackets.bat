@@ -1,2 +1,2 @@
 @echo off
-start Brackets.exe %*
+start ArduinoStudio.exe %*
