@@ -54,11 +54,11 @@ module.exports = function (grunt) {
             },
             "node-linux32": {
                 "dest"      : "<%= downloads %>",
-                "src"       : "http://nodejs.org/dist/v<%= node.version %>/node-v<%= node.version %>-linux-x86.tar.gz"
+                "src"       : "<%= node.url %>/<%= node.version %>/node-v<%= node.version %>-linux-x86.tar.gz"
             },
             "node-linux64": {
                 "dest"      : "<%= downloads %>",
-                "src"       : "http://nodejs.org/dist/v<%= node.version %>/node-v<%= node.version %>-linux-x64.tar.gz"
+                "src"       : "<%= node.url %>/<%= node.version %>/node-v<%= node.version %>-linux-x64.tar.gz"
             },
             /* mac */
             "cef-mac": {
@@ -66,12 +66,12 @@ module.exports = function (grunt) {
                 "src"       : "<%= cef.url %>/cef_binary_<%= cef.version %>_macosx32.zip"
             },
             "cef-mac-symbols": {
-                "src"  : "<%= cef.url %>/cef_binary_<%= cef.version %>_macosx32_release_symbols.zip",
+                "src"  : "<%= cef.urls3 %>/cef_binary_<%= cef.version %>_macosx32_release_symbols.zip",
                 "dest" : "<%= downloads %>/cefsymbols"
             },
             "node-mac": {
                 "dest"      : "<%= downloads %>",
-                "src"       : "http://nodejs.org/dist/v<%= node.version %>/node-v<%= node.version %>-darwin-x86.tar.gz"
+                "src"       : "<%= node.url %>/node-v<%= node.version %>-darwin-x86.tar.gz"
             },
             /* win */
             "cef-win": {
@@ -223,14 +223,16 @@ module.exports = function (grunt) {
             }
         },
         "cef": {
-            "url"           : "http://s3.amazonaws.com/files.brackets.io/cef",
+            "url"           : "http://download.arduino.org/studio/tools",
+            "urls3"         : "http://s3.amazonaws.com/files.brackets.io/cef",
             "version"       : "3.2171.1902"
         },
         "node": {
+            "url"           : "http://download.arduino.org/studio/tools",
             "version"       : "0.10.38"
         },
         "npm": {
-            "version"       : "1.4.28"
+            "version"       : "1.4.12"
         }
     });
 
