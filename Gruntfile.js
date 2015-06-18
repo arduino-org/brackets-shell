@@ -232,7 +232,7 @@ module.exports = function (grunt) {
             "version"       : "0.10.38"
         },
         "npm": {
-            "version"       : "1.4.12"
+            "version"       : "1.2.11"
         }
     });
 
