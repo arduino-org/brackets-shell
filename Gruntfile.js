@@ -227,10 +227,10 @@ module.exports = function (grunt) {
             "version"       : "3.2171.1902"
         },
         "node": {
-            "version"       : "0.10.24"
+            "version"       : "0.10.38"
         },
         "npm": {
-            "version"       : "1.2.11"
+            "version"       : "1.4.28"
         }
     });
 
