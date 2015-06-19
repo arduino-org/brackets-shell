@@ -54,11 +54,11 @@ module.exports = function (grunt) {
             },
             "node-linux32": {
                 "dest"      : "<%= downloads %>",
-                "src"       : "http://nodejs.org/dist/v<%= node.version %>/node-v<%= node.version %>-linux-x86.tar.gz"
+                "src"       : "<%= node.url %>/node-v<%= node.version %>-linux-x86.tar.gz"
             },
             "node-linux64": {
                 "dest"      : "<%= downloads %>",
-                "src"       : "http://nodejs.org/dist/v<%= node.version %>/node-v<%= node.version %>-linux-x64.tar.gz"
+                "src"       : "<%= node.url %>/node-v<%= node.version %>-linux-x64.tar.gz"
             },
             /* mac */
             "cef-mac": {
@@ -217,10 +217,12 @@ module.exports = function (grunt) {
             }
         },
         "cef": {
-            "url"           : "http://s3.amazonaws.com/files.brackets.io/cef",
+            "url"           : "http://download.arduino.org/studio/tools",
+            "urlS3"         : "http://s3.amazonaws.com/files.brackets.io/cef",
             "version"       : "3.1547.1459"
         },
         "node": {
+            "url"           : "http://download.arduino.org/studio/tools",
             "version"       : "0.10.38"
         },
         "npm": {
