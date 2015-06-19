@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=Brackets
+Name=ArduinoStudio
 Type=Application
 Categories=Development
-Exec=/opt/arduinostudio/ArduinoStudio %U
+Exec=/opt/arduinostudio/arduinostudio %U
 Icon=arduinostudio
 MimeType=text/html;
 Keywords=Text;Editor;Write;Web;Development;
