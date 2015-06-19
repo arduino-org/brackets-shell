@@ -150,7 +150,7 @@ module.exports = function (grunt) {
                             "node-core/**",
                             "appshell*.png",
                             "ArduinoStudio",
-                            "Brackets-node",
+                            "ArduinoStudio-node",
                             "cef.pak",
                             "devtools_resources.pak"
                         ],

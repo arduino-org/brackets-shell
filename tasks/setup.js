@@ -415,11 +415,11 @@ module.exports = function (grunt) {
         tarExec.then(function () {
             return rename(tarName, "deps/node");
         }).then(function () {
-            // Create a copy of the "node" binary as "Brackets-node". We need one named "node"
+            // Create a copy of the "node" binary as "ArduinoStudio-node". We need one named "node"
             // for npm to function properly, but we want to call the executable "Brackets-node"
             // in the final binary. Due to gyp's limited nature, we can't (easily) do this rename
             // as part of the build process.
-            return rename("deps/node/bin/node", "deps/node/bin/Brackets-node");
+            return rename("deps/node/bin/node", "deps/node/bin/ArduinoStudio-node");
         }).then(function () {
             nodeWriteVersion();
             done();
