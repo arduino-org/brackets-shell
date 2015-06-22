@@ -189,6 +189,18 @@ module.exports = function (grunt) {
         });
     });
 
+    // task: build-installer-mac-signed
+    grunt.registerTask("build-installer-mac-signed", "Build mac installer with signed app", function () {
+        var done = this.async();
+
+        spawn(["bash buildInstaller-signed.sh"], { cwd: resolve("installer/mac"), env: getBracketsEnv() }).then(function () {
+            done();
+        }, function (err) {
+            grunt.log.error(err);
+            done(false);
+        });
+    });
+
     // task: build-installer-win
     grunt.registerTask("build-installer-win", "Build windows installer", function () {
         var done = this.async();
