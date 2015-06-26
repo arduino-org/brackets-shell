@@ -17,9 +17,9 @@
     <String Id="LicenseRtf" Overridable="yes">EULA_en-us.rtf</String>   
 
     <!-- See also: product name definitions in brackets-win-install-build.xml -->
-    <String Id="ProductName">Brackets</String>
-    <String Id="ShortProductName">Brackets</String>
-    <String Id="SmallProductName">brackets</String>
+    <String Id="ProductName">ArduinoStudio</String>
+    <String Id="ShortProductName">ArduinoStudio</String>
+    <String Id="SmallProductName">arduinostudio</String>
     <String Id="LanguageID" Overridable="yes">1033</String>
         
     <String Id="StandardDlg_Title" Overridable="yes">[ProductName] Installer</String>
