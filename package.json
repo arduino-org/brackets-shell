@@ -1,13 +1,13 @@
 {
     "name": "Brackets-Shell",
-    "version": "1.3.0-0",
-    "homepage": "http://brackets.io",
+    "version": "0.0.2-0",
+    "homepage": "http://arduino.org",
     "issues": {
-        "url": "http://github.com/adobe/brackets-shell/issues"
+        "url": "http://github.com/arduino-org/brackets-shell/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/adobe/brackets-shell.git",
+        "url": "https://github.com/arduino-org/brackets-shell.git",
         "branch": "",
         "SHA": ""
     },
