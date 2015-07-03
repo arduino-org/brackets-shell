@@ -2,13 +2,14 @@
 
 # config
 releaseName="ArduinoStudio"
-version="1.3"
-dmgName="${releaseName} ArduinoStudio ${version}"
+version="0.0.2"
+dmgName="arduinostudio-${version}-macosx"
 format="bzip2"
 encryption="none"
 tmpLayout="./dropDmgConfig/layouts/tempLayout"
 appName="${releaseName}.app"
 tempDir="tempBuild"
+volumeName="ArduinoStudio_v${version}"
 
 # rename app and copy to tempBuild director
 rm -rf $tempDir
@@ -37,7 +38,7 @@ cp -r ./dropDmgConfig/layouts/bracketsLayout/ "$tmpLayout"
 
 # build the DMG
 echo "building DMG..."
-dropdmg ./$tempDir --format $format --encryption $encryption $customIcon --layout-folder "$tmpLayout" $customLicense --volume-name "$dmgName" --base-name "$dmgName"
+dropdmg ./$tempDir --format $format --encryption $encryption $customIcon --layout-folder "$tmpLayout" $customLicense --volume-name "$volumeName" --base-name "$dmgName"
 
 # clean up
 rm -rf $tempDir

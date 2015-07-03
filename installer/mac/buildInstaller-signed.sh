@@ -2,18 +2,19 @@
 
 # config
 releaseName="ArduinoStudio"
-version="v0.0.1"
-dmgName="${releaseName}_${version}"
+version="0.0.2"
+dmgName="arduinostudio-${version}-macosx"
 format="bzip2"
 encryption="none"
 tmpLayout="./dropDmgConfig/layouts/tempLayout"
 appName="${releaseName}.app"
 tempDir="tempBuild"
+volumeName="ArduinoStudio_v${version}"
 
 # rename app and copy to tempBuild director
 rm -rf $tempDir
 mkdir $tempDir
-cp -r "./staging/$appName/" "$tempDir/$appName"
+cp -r "./staging/${BRACKETS_APP_NAME}.app/" "$tempDir/$appName"
 
 # create symlink to Applications folder in staging area
 # with a single space as the name so it doesn't show an unlocalized name
@@ -38,11 +39,9 @@ codesign --deep -f -s "ARDUINO SRL" -v "$tempDir/$appName"
 rm -rf $tempLayoutDir
 cp -r ./dropDmgConfig/layouts/bracketsLayout/ "$tmpLayout"
 
-# cp -r ./dropDmgConfig/layouts/bracketsLayout/ ./dropDmgConfig/layouts/tempLayouts
-
 # build the DMG
 echo "building DMG..."
-dropdmg ./$tempDir --format $format --encryption $encryption $customIcon --layout-folder "$tmpLayout" $customLicense --volume-name "$dmgName" --base-name "$dmgName"
+dropdmg ./$tempDir --format $format --encryption $encryption $customIcon --layout-folder "$tmpLayout" $customLicense --volume-name "$volumeName" --base-name "$dmgName"
 
 # clean up
 rm -rf $tempDir
