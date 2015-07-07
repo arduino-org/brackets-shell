@@ -40,7 +40,7 @@
             </Component>
         </DirectoryRef>
     
-        <Component Id="FileAssociations" Guid="{D0195E8D-0881-42B6-9B4F-DA84D9396506}" Directory="INSTALLDIR" KeyPath="yes">
+        <Component Id="FileAssociations" Guid="{DED84108-FD40-457C-B941-56C56618F2F8}" Directory="INSTALLDIR" KeyPath="yes">
             <!-- Capabilities keys for Vista/7 "Set Program Access and Defaults" -->
             <RegistryValue Root="HKLM" Key="SOFTWARE\$(var.RegistryRoot)\Capabilities" Name="ApplicationIcon"
                            Value="[INSTALLDIR]$(var.ExeName).exe,0" Type="string" />
