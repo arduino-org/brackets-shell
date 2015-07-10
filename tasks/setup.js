@@ -419,7 +419,7 @@ module.exports = function (grunt) {
             // for npm to function properly, but we want to call the executable "Brackets-node"
             // in the final binary. Due to gyp's limited nature, we can't (easily) do this rename
             // as part of the build process.
-            return rename("deps/node/bin/node", "deps/node/bin/Brackets-node");
+            return rename("deps/node/bin/node", "deps/node/bin/ArduinoStudio-node");
         }).then(function () {
             nodeWriteVersion();
             done();

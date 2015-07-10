@@ -237,8 +237,8 @@
               'postbuild_name': 'Copy node executable',
               'action': [
                 'cp',
-                './deps/node/bin/Brackets-node',
-                '${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/Brackets-node',
+                './deps/node/bin/ArduinoStudio-node',
+                '${BUILT_PRODUCTS_DIR}/${EXECUTABLE_FOLDER_PATH}/ArduinoStudio-node',
               ],
             },
             {
@@ -324,7 +324,7 @@
             {
               # Copy node executable to the output directory
               'destination': '<(PRODUCT_DIR)',
-              'files': ['deps/node/bin/Brackets-node'],
+              'files': ['deps/node/bin/ArduinoStudio-node'],
             },
             {
               # Copy node server files to the output directory
