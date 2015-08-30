@@ -90,6 +90,7 @@ module.exports = function (grunt) {
         },
         "clean": {
             "downloads"         : ["downloads"],
+            "archive-mac"       : ["installer/mac/*.zip"],
             "installer-mac"     : ["installer/mac/*.dmg"],
             "installer-win"     : ["installer/win/*.msi"],
             "installer-linux"   : ["installer/linux/debian/*.deb"],

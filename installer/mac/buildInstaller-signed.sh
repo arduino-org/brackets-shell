@@ -14,6 +14,16 @@ volumeName="ArduinoStudio_v${version}"
 # rename app and copy to tempBuild director
 rm -rf $tempDir
 mkdir $tempDir
+
+# sign Application
+cd staging/
+codesign --deep -f -s "ARDUINO SRL" -v ArduinoStudio.app/
+
+# create zip for redistributable version
+zip -r "$dmgName".zip "$appName/" -x *.git* *.gitignore* *.DS_Store* && mv "$dmgName".zip ../
+cd ../
+
+# preliminary operations for DMG creation
 cp -r "./staging/${BRACKETS_APP_NAME}.app/" "$tempDir/$appName"
 
 # create symlink to Applications folder in staging area
@@ -31,9 +41,6 @@ fi
 if [ -d ./dropDmgConfig/licenses/bracketsLicense ]; then
   customLicense="--license-folder ./dropDmgConfig/licenses/bracketsLicense"
 fi
-
-# sign Application
-codesign --deep -f -s "ARDUINO SRL" -v "$tempDir/$appName"
 
 # create disk layout
 rm -rf $tempLayoutDir
