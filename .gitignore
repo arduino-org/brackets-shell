@@ -28,6 +28,7 @@ libcef_dll_wrapper.vcxproj
 *.vcxproj.user
 *.log
 *.dmg
+*.zip
 
 Debug
 Release

@@ -2,7 +2,7 @@
 
 # config
 releaseName="ArduinoStudio"
-version="0.0.3"
+version="0.0.5"
 dmgName="arduinostudio-${version}-macosx"
 format="bzip2"
 encryption="none"
